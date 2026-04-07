@@ -1,6 +1,6 @@
 services:
   mirofish:
-    image: ghcr.io/666ghj/mirofish:latest
+    build: .
     container_name: mirofish
     environment:
       - LLM_API_KEY=${LLM_API_KEY}
