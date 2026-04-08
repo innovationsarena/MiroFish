@@ -17,7 +17,7 @@ export default defineConfig({
     allowedHosts: ["mirofish.innovationsarenan.se"],
     proxy: {
       "/api": {
-        target: "http://localhost:5001",
+        target: "https://mirofish.innovationsarenan.se:5001",
         changeOrigin: true,
         secure: false,
       },
