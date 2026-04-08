@@ -13,7 +13,9 @@ COPY locales/ ./locales/
 COPY frontend/ ./frontend/
 
 # Build the Vue SPA
-RUN cd frontend && npm run build
+# Use --outDir to write output to a known location
+WORKDIR /app/frontend
+RUN npx vite build 2>&1 || (echo "--- Build failed. Listing /app structure ---" && ls -la /app/ /app/locales/ /app/frontend/src/i18n/ && false)
 
 # --- Production stage ---
 FROM nginx:alpine

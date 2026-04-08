@@ -15,6 +15,12 @@ export default defineConfig({
     port: 3000,
     open: true,
     allowedHosts: true,
+    fs: {
+      allow: [
+        // Allow access to shared locales directory above frontend root
+        path.resolve(__dirname, ".."),
+      ],
+    },
     proxy: {
       "/api": {
         target: "http://0.0.0.0:5001",
