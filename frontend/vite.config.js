@@ -23,7 +23,7 @@ export default defineConfig({
     },
     proxy: {
       "/api": {
-        target: "http://0.0.0.0:5001",
+        target: "https://mirofish.innovationsarenan.se:5001",
         changeOrigin: true,
         secure: false,
       },
