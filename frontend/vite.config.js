@@ -14,16 +14,10 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    allowedHosts: true,
-    fs: {
-      allow: [
-        // Allow access to shared locales directory above frontend root
-        path.resolve(__dirname, ".."),
-      ],
-    },
+    allowedHosts: ["mirofish.innovationsarenan.se"],
     proxy: {
       "/api": {
-        target: "https://mirofish.innovationsarenan.se:5001",
+        target: "http://localhost:5001",
         changeOrigin: true,
         secure: false,
       },

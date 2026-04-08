@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-// Vue Router
+// 使用 Vue Router 来管理页面
 </script>
 
 <style>
@@ -15,7 +15,7 @@
 }
 
 #app {
-  font-family: "JetBrains Mono", "Space Grotesk", "Noto Sans SC", monospace;
+  font-family: 'JetBrains Mono', 'Space Grotesk', 'Noto Sans SC', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
