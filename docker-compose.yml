@@ -39,3 +39,4 @@ services:
     restart: unless-stopped
     labels:
       - traefik.http.middlewares.miroauth.basicauth.users=${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}
+      - "traefik.http.routers.myservice.middlewares=miroauth"
