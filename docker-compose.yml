@@ -14,7 +14,13 @@ services:
     volumes:
       - ./backend/uploads:/app/backend/uploads
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5001/health')"]
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:5001/health')",
+        ]
       interval: 30s
       timeout: 5s
       retries: 3
@@ -31,3 +37,5 @@ services:
       backend:
         condition: service_healthy
     restart: unless-stopped
+    labels:
+      - traefik.http.middlewares.miroauth.basicauth.users=${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}
