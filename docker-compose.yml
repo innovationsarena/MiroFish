@@ -37,7 +37,7 @@ services:
       backend:
         condition: service_healthy
     restart: unless-stopped
-    labels:
-      - "traefik.http.middlewares.miroauth.basicauth.users=gr:$$2y$$05$$X07mZVWM7abAHOM3Btdr0OJ6jb3lyDu0S62D73.fvFCy8ELxjWY3C"
-      - "traefik.http.routers.http-0-acgoo4kwk0swcsg8g88cos8g-frontend.middlewares=miroauth"
-      - "traefik.http.routers.https-0-acgoo4kwk0swcsg8g88cos8g-frontend.middlewares=miroauth"
+#    labels:
+#      - "traefik.http.middlewares.miroauth.basicauth.users=gr:$$2y$$05$$X07mZVWM7abAHOM3Btdr0OJ6jb3lyDu0S62D73.fvFCy8ELxjWY3C"
+#     - "traefik.http.routers.http-0-acgoo4kwk0swcsg8g88cos8g-frontend.middlewares=miroauth"
+#     - "traefik.http.routers.https-0-acgoo4kwk0swcsg8g88cos8g-frontend.middlewares=miroauth"
